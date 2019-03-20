@@ -1,4 +1,18 @@
 OS PREFERRED : RHEL V7.5
+
+##############USES Apache server##############################
+yum install httpd
+
+now, go to
+            cd /var/www/cgi-bin/
+and paste the contents of the cgi-bin.
+again. go to
+            cd /var/www/html/
+and paste the contents of the html file.
+run this command.
+
+systemctl restart httpd
+
 ##############SETUP STATIC IP, run this command in terminal.#######################
 setup the static IP TO: 192.168.43.7
             vi /etc/sysconfig/network-scripts/ifcfg-enp0s3 
@@ -25,6 +39,10 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.43.1
 DNS1=192.168.43.1
 
+to exit
+press esc, :wq! to save. Once reached terminal, type this code
+            systemctl restart network
+            systemctl restart httpd           
 #################################################################################
 
 ansible
