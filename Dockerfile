@@ -5,6 +5,6 @@
   RUN yum install -y httpd
   COPY cgi-bin /var/www/cgi-bin/
   COPY html  /var/www/html/
-  COPY wrapper.sh /
-  
-  CMD ["./wrapper.sh"]
+  CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+
+  EXPOSE 80
