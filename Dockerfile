@@ -1,4 +1,4 @@
-  FROM centos:7.5
+  FROM centos:7
   LABEL MAINTAINER  ajeetraina@gmail.com
   
   RUN yum update -y
