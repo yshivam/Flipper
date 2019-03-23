@@ -5,6 +5,6 @@
   RUN yum install -y httpd
   COPY cgi-bin /var/www/cgi-bin/
   COPY html  /var/www/html/
-  CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+  CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
   EXPOSE 80
