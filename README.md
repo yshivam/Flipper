@@ -1,30 +1,73 @@
 # Flipper - An Interactive way to Build, Ship & Navigate your Docker containers. 
 
+Flipper is a Docker playground which allows users to run Docker commands in a matter of seconds. It gives the experience of having a free RHEL Virtual Machine in browser, where you can build and run Docker containers.
 
+# Highlights:
 
+- Flipper uses Python as a backend scripting language
+- Flipper uses Python-CGI in order to interact through a Web server with a client running a Web browser.
+- It uses HTML/CSS as a Front-end language.
+- It can be hosted on your Laptop flawlessly
 
+# How to Test Drive Flipper
 
-OS PREFERRED : RHEL V7.5
+Flipper is supplied as Docker Image by name "shellinabox_test:v1". It allows access to the command-line from web based
+terminal emulator.
 
-##############USES Apache server##############################
+```
+docker pull shellinabox_test:v1
+````
+
+# Reference:
+
+## How to get IP Address of the Docker container
+
+```
+docker inspect -f {{.NetworkSettings.IPAddress}} dock1
+```
+
+# Manual Steps:
+
+## Pre-requisite:
+
+- Red Hat Enterprise Linux 7.5
+
+## Step:1 - Installing Apache Server
+
+```
 yum install httpd
+```
 
-now, go to
-            cd /var/www/cgi-bin/
-and paste the contents of the cgi-bin.
-again. go to
-            cd /var/www/html/
-and paste the contents of the html file.
-run this command.
+## Configuration Settings
 
+Copy the contents under /var/www/cgi-bin/
+
+```
+cd /var/www/cgi-bin/
+```
+
+## Paste the contents of the cgi-bin.
+
+Change directory to /var/www/html directory as shown below:
+
+```
+cd /var/www/html/
+```
+
+Paste the contents of the html file.
+
+
+## Run this command.
+
+```
 systemctl restart httpd
+```
 
-##############SETUP STATIC IP, run this command in terminal.#######################
-setup the static IP TO: 192.168.43.7
-            vi /etc/sysconfig/network-scripts/ifcfg-enp0s3 
-enp0s3 - Internet card name.
-Modify the content of file.
+## Setting up static IP
 
+Edit /etc/sysconfig/network-scripts/ifcfg-enp0s3 where as enp0s3 is network interface name with the below entry:
+
+```
 TYPE=Ethernet
 PROXY_METHOD=none
 BROWSER_ONLY=no
@@ -44,15 +87,18 @@ IPADDR=192.168.43.7
 NETMASK=255.255.255.0
 GATEWAY=192.168.43.1
 DNS1=192.168.43.1
+```
 
-to exit
-press esc, :wq! to save. Once reached terminal, type this code
-            systemctl restart network
-            systemctl restart httpd           
-#################################################################################
 
-ansible
-Docker
-hadoop v1
+Exit, press esc, :wq! to save. 
+
+## Running the below command:
+
+```
+systemctl restart network
+systemctl restart httpd           
+````
+
+
 
 
