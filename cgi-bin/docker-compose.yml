@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+
+  myservice:
+    image: syaduka/shellinabox_final:v1
+    privileged: true
+    expose:
+      - 4200
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
