@@ -9,24 +9,24 @@ Flipper is a Docker playground which allows users to run Docker commands in a ma
 - It uses HTML/CSS as a Front-end language.
 - It can be hosted on your Laptop flawlessly
 
-# Cloning the Repository
+# Cloning the Repository.
 
 ```
 git clone https://github.com/yshivam/Flipper/
 ```
 
-## Building Docker Image
+## Building Docker Image.
 
 ```
 docker build -t yshivam/flipper .
 ```
 
-## Running the Flipper Docker Image
+## Running the Flipper Docker Image.
 
 ```
 docker run -d -p 82:80 yshivam/flipper
 ```
 
-## Accessing the Flipper under Web Browser
+## Accessing the Flipper under Web Browser.
 
 Go to your browser and open up http://<IP>:82 and you should be able to see Flipper UI
