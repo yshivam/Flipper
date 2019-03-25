@@ -7,9 +7,9 @@
   RUN yum install -y python36u-libs 
   RUN yum install -y python36u-devel
   RUN yum install -y python36u-pip
-  #RUN yum install -y httpd
-  #COPY cgi-bin /var/www/cgi-bin/
-  #COPY html  /var/www/html/
-  #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+  RUN yum install -y httpd
+  COPY cgi-bin /var/www/cgi-bin/
+  COPY html  /var/www/html/
+  CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
-  #EXPOSE 80
+  EXPOSE 80
