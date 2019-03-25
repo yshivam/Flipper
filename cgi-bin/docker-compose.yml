@@ -3,7 +3,7 @@ version: "3.4"
 services:
 
   myservice:
-    image: syaduka/shellinabox_final:v1
+    build: .
     privileged: true
     expose:
       - 4200
