@@ -1,5 +1,5 @@
 FROM syaduka/shellinabox_final:v1
-LABEL MAINTAINER syaduka@gmail.com
+LABEL MAINTAINER yaduka.shivam@gmail.com
 
 ENV URL=https://download.docker.com/linux/centos/docker-ce.repo
 
