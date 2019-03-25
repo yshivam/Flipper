@@ -20,7 +20,7 @@ usr = form.getvalue('usr')
 #if a[0] == 0:
 #container_name = sp.getstatusoutput("sudo ansible-playbook staas/shellinabox.yml --extra-vars='x={0}'".format(cname))
 
-
+#a1 = subprocess.getoutput("sudo docker build -t yshivam/flipper .")
 b = subprocess.getstatusoutput("sudo docker run -dit --name {0} shellinabox_test:v1".format(usr))
 if b[0] == 0:
 	print("<br><br>")
