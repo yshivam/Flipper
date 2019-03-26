@@ -18,7 +18,7 @@ git clone https://github.com/yshivam/Flipper/
 # Go to the Flipper Directory.
 
 ```
-cd Flipper
+cd Flipper/
 ```
 
 ## Building Docker Image.
