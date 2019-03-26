@@ -30,3 +30,6 @@ docker run -d -p 82:80 yshivam/flipper
 ## Accessing the Flipper under Web Browser
 
 Go to your browser and open up http://<IP>:82 and you should be able to see Flipper UI
+
+
+https://asciinema.org/a/236488
