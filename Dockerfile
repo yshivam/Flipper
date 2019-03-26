@@ -1,15 +1,20 @@
-  FROM centos:7
-  LABEL MAINTAINER  ajeetraina@gmail.com
-  
-  RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm
-  RUN yum update -y
-  RUN yum install -y python36u
-  RUN yum install -y python36u-libs 
-  RUN yum install -y python36u-devel
-  RUN yum install -y python36u-pip
-  RUN yum install -y httpd
-  COPY cgi-bin /var/www/cgi-bin/
-  COPY html  /var/www/html/
-  CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+FROM ubuntu
 
-  EXPOSE 80
+LABEL MAINTAINER  ajeetraina@gmail.com
+
+RUN apt-get update
+RUN apt-get install -y apt-utils vim curl apache2 apache2-utils
+RUN apt-get -y install python3 libapache2-mod-wsgi-py3
+RUN ln /usr/bin/python3 /usr/bin/python
+RUN apt-get -y install python3-pip
+RUN ln /usr/bin/pip3 /usr/bin/pip
+RUN pip install --upgrade pip
+RUN pip install django ptvsd
+#ADD ./demo_site.conf /etc/apache2/sites-available/000-default.conf
+EXPOSE 80 3500
+CMD ["apache2ctl", "-D", "FOREGROUND"]  
+  
+  
+  
+  
+ 
