@@ -10,7 +10,7 @@ import cgi
 
 form = cgi.FieldStorage()
 usr = form.getvalue('usr')
-#port = form.getvalue('port')
+port = form.getvalue('port')
 
 #usr = input("enter new user you want to add : ")
 #port = input("enter a number (1024 - 65000) : ")
@@ -21,7 +21,7 @@ usr = form.getvalue('usr')
 #container_name = sp.getstatusoutput("ansible-playbook staas/shellinabox.yml --extra-vars='x={0}'".format(cname))
 
 #a1 = subprocess.getoutput("docker build -t shellinabox_test:v1 .")
-b = subprocess.getstatusoutput("docker run -dit --name {0} shellinabox_test:v1".format(usr))
+b = subprocess.getstatusoutput("docker run -dit -p {pot}:4200 --name {name} shellinabox_test:v1".format(pot=port,name=usr))
 if b[0] == 0:
 	print("<br><br>")
 	#y = subprocess.getoutput("docker exec -it {0} hostname -i".format(usr))
