@@ -16,6 +16,7 @@ COPY cgi-bin /var/www/cgi-bin/
 COPY html  /var/www/html/
 
 #a2enmod cgi
+#service apache2 restart
 
 EXPOSE 80 3500
 CMD ["apache2ctl", "-D", "FOREGROUND"]  
