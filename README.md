@@ -30,7 +30,7 @@ docker build -t yshivam/flipper .
 ## Running the Flipper Docker Image.
 
 ```
-docker run -d -p 82:80 yshivam/flipper
+docker run -dit --privileged -v /var/run/docker.sock:/var/run/docker.sock -p 82:80 yshivam/flipper
 ```
 
 ## Accessing the Flipper under Web Browser.
