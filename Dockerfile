@@ -8,8 +8,8 @@ RUN apt-get -y install python3-pip
 RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 RUN pip install django ptvsd
-COPY 000-default.conf /etc/apache2/sites-enabled/
-COPY apache2.conf /etc/apache2/
+COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
+COPY apache2.conf /etc/apache2/apache2.conf
 RUN a2enmod cgi
 EXPOSE 80 3500
 CMD ["apache2ctl", "-D", "FOREGROUND"]
