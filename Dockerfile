@@ -14,6 +14,7 @@
   COPY html  /var/www/html/
   COPY 000-default.conf /etc/apache2/sites-enabled/
   COPY apache2.conf /etc/apache2/
+  RUN a2enmod cgi
   CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
  
   EXPOSE 80
