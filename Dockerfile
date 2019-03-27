@@ -11,7 +11,7 @@ RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 #ADD ./demo_site.conf /etc/apache2/sites-available/000-default.conf
 
-COPY cgi-bin /var/lib/cgi-bin/ 
+COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
 EXPOSE 80 3500
