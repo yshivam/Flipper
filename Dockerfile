@@ -12,6 +12,8 @@
   RUN yum install -y httpd
   COPY cgi-bin /var/www/cgi-bin/
   COPY html  /var/www/html/
+  COPY 000-default.conf /etc/apache2/sites-enabled/
+  COPY apache2.conf /etc/apache2/
   CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
  
   EXPOSE 80
