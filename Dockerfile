@@ -10,8 +10,8 @@ RUN apt-get -y install python3-pip
 RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 
-COPY apache2.conf /etc/apache2/apache2.conf
-COPY serve-cgi-bin.conf /etc/apache2/conf-available/serve-cgi-bin.conf
+COPY apache2.conf /etc/apache2/
+COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
