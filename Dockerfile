@@ -15,6 +15,7 @@ RUN pip install --upgrade pip
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
+#chmod a+x /var/www/cgi-bin/caas_docker.py
 #a2enmod cgi
 #service apache2 restart
 
