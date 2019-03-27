@@ -19,6 +19,8 @@ port = form.getvalue('port')
 #a=subprocess.getstatusoutput("useradd -p '"+passw+"' "+usr)
 #if a[0] == 0:
 #container_name = sp.getstatusoutput("ansible-playbook staas/shellinabox.yml --extra-vars='x={0}'".format(cname))
+#host_ip = subprocess.getoutput("ifconfig eth1 | grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1")
+
 
 #a1 = subprocess.getoutput("docker build -t shellinabox_test:v1 .")
 b = subprocess.getstatusoutput("docker run -dit -p {pot}:4200 --name {name} shellinabox_test:v1".format(pot=port,name=usr))
