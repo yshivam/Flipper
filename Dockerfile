@@ -12,8 +12,8 @@ RUN pip install --upgrade pip
 
 #curl -sSl https://get.docker.com/ | sh
 
-COPY apache2.conf /etc/apache2/
-COPY serve-cgi-bin.conf /etc/apache2/conf-available/
+#COPY apache2.conf /etc/apache2/
+#COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
@@ -24,7 +24,7 @@ COPY html  /var/www/html/
 EXPOSE 80 3500
 #a2enmod cgi
 #service apache2 restart
-#CMD ["apache2ctl", "-D", "FOREGROUND"]  
+CMD ["apache2ctl", "-D", "FOREGROUND"]  
   
   
   
