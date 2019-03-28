@@ -10,7 +10,6 @@ COPY html  /var/www/html/
 
 
 EXPOSE 80 3500
-#a2enmod cgi
 #service apache2 restart
 
 
@@ -18,7 +17,7 @@ EXPOSE 80 3500
 
 
 
-
+##################Orignal Content################
 #FROM ubuntu
 #LABEL MAINTAINER  yaduka.shivam@gmail.com
 #RUN apt-get update
@@ -32,7 +31,7 @@ EXPOSE 80 3500
 #COPY apache2.conf /etc/apache2/
 #COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 #CMD ["apache2ctl", "-D", "FOREGROUND"]  
-
+#a2enmod cgi
   
   
   
