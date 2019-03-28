@@ -1,19 +1,7 @@
-FROM ubuntu
+FROM syaduka/portalui:latest
 
 LABEL MAINTAINER  yaduka.shivam@gmail.com
 
-RUN apt-get update
-RUN apt-get install -y apt-utils vim curl apache2 apache2-utils
-RUN apt-get -y install python3 libapache2-mod-wsgi-py3
-RUN ln /usr/bin/python3 /usr/bin/python
-RUN apt-get -y install python3-pip
-RUN ln /usr/bin/pip3 /usr/bin/pip
-RUN pip install --upgrade pip
-
-#curl -sSl https://get.docker.com/ | sh
-
-#COPY apache2.conf /etc/apache2/
-#COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
@@ -24,7 +12,27 @@ COPY html  /var/www/html/
 EXPOSE 80 3500
 #a2enmod cgi
 #service apache2 restart
-CMD ["apache2ctl", "-D", "FOREGROUND"]  
+
+
+
+
+
+
+
+#FROM ubuntu
+#LABEL MAINTAINER  yaduka.shivam@gmail.com
+#RUN apt-get update
+#RUN apt-get install -y apt-utils vim curl apache2 apache2-utils
+#RUN apt-get -y install python3 libapache2-mod-wsgi-py3
+#RUN ln /usr/bin/python3 /usr/bin/python
+#RUN apt-get -y install python3-pip
+#RUN ln /usr/bin/pip3 /usr/bin/pip
+#RUN pip install --upgrade pip
+#curl -sSl https://get.docker.com/ | sh
+#COPY apache2.conf /etc/apache2/
+#COPY serve-cgi-bin.conf /etc/apache2/conf-available/
+#CMD ["apache2ctl", "-D", "FOREGROUND"]  
+
   
   
   
