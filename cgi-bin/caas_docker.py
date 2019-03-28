@@ -24,6 +24,7 @@ port = form.getvalue('port')
 
 #a1 = subprocess.getoutput("docker build -t shellinabox_test:v1 .")
 b = subprocess.getstatusoutput("docker run -dit -p {pot}:4200 --name {name} syaduka/shellinabox_final:v1".format(pot=port,name=usr))
+print(b)
 if b[0] == 0:
 	print("<br><br>")
 	#y = subprocess.getoutput("docker exec -it {0} hostname -i".format(usr))
