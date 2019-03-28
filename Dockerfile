@@ -11,19 +11,20 @@ RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 
 #curl -sSl https://get.docker.com/ | sh
-#COPY apache2.conf /etc/apache2/
-#COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 
+COPY apache2.conf /etc/apache2/
+COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
 #chmod a+x /var/www/cgi-bin/caas_docker.py
 #chmod 666 /var/run/docker.sock
-#a2enmod cgi
-#service apache2 restart
+
 
 EXPOSE 80 3500
-CMD ["apache2ctl", "-D", "FOREGROUND"]  
+#a2enmod cgi
+#service apache2 restart
+#CMD ["apache2ctl", "-D", "FOREGROUND"]  
   
   
   
