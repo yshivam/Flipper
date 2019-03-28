@@ -46,5 +46,5 @@ if b[0] == 0:
 	</div>  """.format(x))
 
 else:
-	print("<strong> <center><marquee behavior='alternate' direction='down'>sorry! Try different name....</marquee></center> </strong>")
+	print("<h3><br><br><br><br><br><br><br><br><br><marquee behavior="alternate">OppS! That Didn't work, let's Try with a different name, Shall we?</marquee></h3>")
 
