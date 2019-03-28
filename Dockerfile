@@ -18,6 +18,7 @@ COPY cgi-bin /var/www/cgi-bin/
 COPY html  /var/www/html/
 
 #chmod a+x /var/www/cgi-bin/caas_docker.py
+#chmod 666 /var/run/docker.sock
 #a2enmod cgi
 #service apache2 restart
 
