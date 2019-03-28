@@ -10,8 +10,10 @@ RUN apt-get -y install python3-pip
 RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 
+#curl -sSl https://get.docker.com/ | sh
 #COPY apache2.conf /etc/apache2/
 #COPY serve-cgi-bin.conf /etc/apache2/conf-available/
+
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
