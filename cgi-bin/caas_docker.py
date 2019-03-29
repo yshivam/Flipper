@@ -49,5 +49,5 @@ if b[0] == 0:
 	</div>  """.format(x))
 
 else:
-	print('<h3><br><br><br><br><br><br><br><br><br><marquee behavior="alternate">OppS! That Did not work, let us s Try with a different name, Shall we?</marquee></h3>')
+	print('<h3><br><br><br><br><br><br><br><br><br><marquee behavior="alternate">OppS! That Did not work, let us try with a different name, Shall we?</marquee></h3>')
 
