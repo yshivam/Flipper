@@ -5,9 +5,12 @@ LABEL MAINTAINER  yaduka.shivam@gmail.com
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 
+COPY service-script.sh service-script.sh
+CMD ./service-script.sh
+
+
 #chmod a+x /var/www/cgi-bin/caas_docker.py
 #chmod 666 /var/run/docker.sock
-
 
 EXPOSE 80 3500
 #service apache2 restart
