@@ -6,7 +6,6 @@ COPY cgi-bin /var/www/cgi-bin/
 COPY html  /var/www/html/
 
 COPY service-script.sh service-script.sh
-CMD ./service-script.sh
 
 
 #chmod a+x /var/www/cgi-bin/caas_docker.py
@@ -19,7 +18,7 @@ EXPOSE 80 3500
 
 
 
-
+#CMD ./service-script.sh
 ##################Orignal Content################
 #FROM ubuntu
 #LABEL MAINTAINER  yaduka.shivam@gmail.com
