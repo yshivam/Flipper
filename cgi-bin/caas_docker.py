@@ -12,6 +12,9 @@ form = cgi.FieldStorage()
 usr = form.getvalue('usr')
 port = form.getvalue('port')
 
+
+#usr = "test"
+#port = "786"
 #usr = input("enter new user you want to add : ")
 #port = input("enter a number (1024 - 65000) : ")
 #passw = "iuc"
@@ -24,7 +27,7 @@ port = form.getvalue('port')
 
 #a1 = subprocess.getoutput("docker build -t shellinabox_test:v1 .")
 b = subprocess.getstatusoutput("docker run -dit -p {pot}:4200 --name {name} syaduka/shellinabox_final:v1".format(pot=port,name=usr))
-print(b)
+#print(b)
 if b[0] == 0:
 	print("<br><br>")
 	#y = subprocess.getoutput("docker exec -it {0} hostname -i".format(usr))
