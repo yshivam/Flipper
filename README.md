@@ -33,6 +33,19 @@ docker build -t yshivam/flipper .
 docker run -dit --privileged -v /var/run/docker.sock:/var/run/docker.sock -p 82:80 --name portalUI yshivam/flipper
 ```
 
+## Executing the Flipper Docker Image.
+```
+docker exec -it portalUI bash
+```
+
+## Executing the following commands.
+```
+chmod a+x /var/www/cgi-bin/caas_docker.py
+```
+```
+chmod 666 /var/run/docker.sock
+```
+
 ## Accessing the Flipper under Web Browser.
 
 Go to your browser and open up http://<IP>:82 and you should be able to see Flipper UI
