@@ -45,6 +45,9 @@ chmod a+x /var/www/cgi-bin/caas_docker.py
 ```
 chmod 666 /var/run/docker.sock
 ```
+```
+service apache2 restart
+```
 
 ## Accessing the Flipper under Web Browser.
 
