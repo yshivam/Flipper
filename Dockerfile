@@ -6,16 +6,13 @@ COPY service-script.sh service-script.sh
 EXPOSE 80 3500
 
 
-#chmod a+x /var/www/cgi-bin/caas_docker.py
-#chmod 666 /var/run/docker.sock
 
-
-
-#service apache2 restart
-
-
+#########ISSUES#########
+#Running the service-script.sh file inside the container via Dockerfile.
+#CMD ["chmod a+x service-script.sh","-D","FOREGROUND"]
 #CMD ["./service-script.sh","-D","FOREGROUND"]
-##################Orignal Content################
+
+##################Orignal Content for the image syaduka/portalui:latest ################
 #FROM ubuntu
 #LABEL MAINTAINER  yaduka.shivam@gmail.com
 #RUN apt-get update
@@ -30,8 +27,3 @@ EXPOSE 80 3500
 #COPY serve-cgi-bin.conf /etc/apache2/conf-available/
 #CMD ["apache2ctl", "-D", "FOREGROUND"]  
 #a2enmod cgi
-  
-  
-  
-  
- 
