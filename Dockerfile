@@ -2,6 +2,7 @@ FROM syaduka/portalui:latest
 LABEL MAINTAINER  yaduka.shivam@gmail.com
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
+COPY service-script.sh service-script.sh
 EXPOSE 80 3500
 
 
@@ -14,7 +15,6 @@ EXPOSE 80 3500
 
 
 #CMD ["./service-script.sh","-D","FOREGROUND"]
-#COPY service-script.sh service-script.sh
 ##################Orignal Content################
 #FROM ubuntu
 #LABEL MAINTAINER  yaduka.shivam@gmail.com
