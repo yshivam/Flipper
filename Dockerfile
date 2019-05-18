@@ -9,8 +9,8 @@ EXPOSE 80 3500
 
 #########ISSUES#########
 #Running the service-script.sh file inside the container via Dockerfile.
-CMD ["chmod a+x service-script.sh","-D","FOREGROUND"]
-CMD ["./service-script.sh","-D","FOREGROUND"]
+#CMD ["chmod a+x service-script.sh","-D","FOREGROUND"]
+#CMD ["./service-script.sh","-D","FOREGROUND"]
 
 ##################Orignal Content for the image syaduka/portalui:latest ################
 #FROM ubuntu
