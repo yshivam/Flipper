@@ -42,6 +42,9 @@ docker exec -it portalUI bash
 ```
 chmod a+x service-script.sh
 ```
+```
+source service-script.sh
+```
 
 ## Accessing the Flipper under Web Browser.
 
