@@ -1,16 +1,14 @@
 FROM syaduka/portalui:latest
-
 LABEL MAINTAINER  yaduka.shivam@gmail.com
-
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
-
+EXPOSE 80 3500
 
 
 #chmod a+x /var/www/cgi-bin/caas_docker.py
 #chmod 666 /var/run/docker.sock
 
-EXPOSE 80 3500
+
 
 #service apache2 restart
 
