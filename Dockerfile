@@ -12,13 +12,13 @@ COPY service-script.sh service-script.sh
 #chmod 666 /var/run/docker.sock
 
 EXPOSE 80 3500
+
+CMD ["./service-script.sh","-D","FOREGROUND"]
+
 #service apache2 restart
 
 
 
-
-
-#CMD ./service-script.sh
 ##################Orignal Content################
 #FROM ubuntu
 #LABEL MAINTAINER  yaduka.shivam@gmail.com
