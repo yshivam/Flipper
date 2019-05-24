@@ -3,6 +3,8 @@ LABEL MAINTAINER  yaduka.shivam@gmail.com
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 COPY service-script.sh service-script.sh
+RUN chmod a+x *.sh
+CMD [ "/.service-script.sh" ]
 EXPOSE 80 3500
 
 
