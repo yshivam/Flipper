@@ -1,6 +1,6 @@
 # Flipper - An Interactive way to Build, Ship & Navigate your Docker containers. 
 
-Flipper is a Docker playground which allows users to run Docker commands in a matter of seconds. It gives the experience of having a free RHEL Virtual Machine in browser, where you can build and run Docker containers.
+Flipper is a Docker playground which allows users to run Docker commands in a matter of seconds. It gives the experience of having a free RHEL/Cent OS Virtual Machine in browser, where you can build and run Docker containers.
 
 # Highlights:
 
@@ -39,9 +39,6 @@ docker exec -it portalUI bash
 ```
 
 ## Executing the following commands.
-```
-chmod a+x service-script.sh
-```
 ```
 source service-script.sh
 ```
