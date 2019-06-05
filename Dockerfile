@@ -4,7 +4,6 @@ COPY cgi-bin /var/www/cgi-bin/
 COPY html  /var/www/html/
 COPY service-script.sh service-script.sh
 RUN chmod a+x /service-script.sh
-RUN ./service-script.sh
 EXPOSE 80 3500
 
 
