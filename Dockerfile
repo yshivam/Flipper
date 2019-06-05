@@ -3,13 +3,14 @@ LABEL MAINTAINER  yaduka.shivam@gmail.com
 COPY cgi-bin /var/www/cgi-bin/ 
 COPY html  /var/www/html/
 COPY service-script.sh service-script.sh
+CMD ["chmod a+x /service-script.sh"]
 EXPOSE 80 3500
 
 
 
 #########ISSUES#########
 #Running the service-script.sh file inside the container via Dockerfile.
-#RUN chmod a+x *.sh / #CMD ["chmod a+x service-script.sh"]
+#RUN chmod a+x *.sh / #CMD ["chmod a+x /service-script.sh"]
 #CMD ["./service-script.sh"]
 
 ##################Orignal Content for the image syaduka/portalui:latest ################
